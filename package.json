@@ -1,7 +1,7 @@
 {
-  "name": "kyoronet.github.io",
+  "name": "www.kyoro.net",
   "version": "1.0.0",
-  "description": "My groundbreaking Nuxt.js project",
+  "description": "kyoro profile",
   "author": "kyoronet",
   "private": true,
   "scripts": {

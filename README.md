@@ -1,10 +1,10 @@
-# kyoronet.github.io
+# www.kyoro.net
 
-> My groundbreaking Nuxt.js project
+> [Nuxt.js](https://github.com/nuxt/nuxt.js) + [Vuetify.js](https://github.com/vuetifyjs/vuetify) project.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
@@ -15,8 +15,7 @@ $ yarn run dev
 $ yarn run build
 $ yarn start
 
-# generate static project
+# manual deploy
 $ yarn run generate
+$ yarn run deploy
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
