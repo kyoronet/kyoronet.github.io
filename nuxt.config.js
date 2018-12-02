@@ -1,14 +1,5 @@
 const pkg = require('./package')
 
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/kyoronet.github.io/'
-        }
-      }
-    : {}
-
 module.exports = {
   mode: 'universal',
 
@@ -79,5 +70,7 @@ module.exports = {
       }
     }
   },
-  ...routerBase
+  generate: {
+    fallback: true
+  }
 }
