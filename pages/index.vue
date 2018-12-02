@@ -14,7 +14,7 @@
           <v-avatar size="200">
             <img src="img/icon_400x400.jpg">
           </v-avatar>
-          <h1 class="white--text mb-2 display-1 text-xs-center">Welcom</h1>
+          <h1 class="white--text mb-2 display-1 text-xs-center">Welcome</h1>
         </v-layout>
       </v-parallax>
     </section>
