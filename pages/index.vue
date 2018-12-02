@@ -2,7 +2,7 @@
   <v-content>
     <section>
       <v-parallax
-        src="img/hero.jpeg"
+        src="https://picsum.photos/1350/805?random"
         height="600"
       >
         <v-layout
@@ -14,7 +14,6 @@
           <v-avatar size="200">
             <img src="img/icon_400x400.jpg">
           </v-avatar>
-          <h1 class="white--text mb-2 display-1 text-xs-center">Welcome</h1>
         </v-layout>
       </v-parallax>
     </section>

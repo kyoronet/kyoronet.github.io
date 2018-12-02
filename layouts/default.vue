@@ -52,7 +52,7 @@
 export default {
   data() {
     return {
-      dark: false,
+      dark: Math.floor(Math.random() * 2) === 0,
       clipped: true,
       drawer: true,
       fixed: true,
