@@ -46,7 +46,7 @@
                   <v-icon class="blue--text text--lighten-2">mdi-github-circle</v-icon>
                 </v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title><a href="https://github.com/kyoronet">@kyoronet</a></v-list-tile-title>
+                  <v-list-tile-title><a href="https://github.com/kyoronet">Github</a></v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile>
@@ -54,7 +54,7 @@
                   <v-icon class="blue--text text--lighten-2">mdi-twitter</v-icon>
                 </v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title><a href="https://twitter.com/kyoro_net">@kyoro_net</a></v-list-tile-title>
+                  <v-list-tile-title><a href="https://twitter.com/kyoro_net">Twitter</a></v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </v-list>
