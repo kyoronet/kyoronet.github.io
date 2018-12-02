@@ -51,7 +51,7 @@
 export default {
   data() {
     return {
-      dark: false,
+      dark: true,
       clipped: true,
       drawer: true,
       fixed: true,
@@ -72,9 +72,6 @@ export default {
       miniVariant: false,
       title: 'キョロの紹介'
     }
-  },
-  created: function() {
-    this.dark = Math.floor(Math.random() * 2) === 0
   }
 }
 </script>
