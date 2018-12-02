@@ -51,7 +51,7 @@
 export default {
   data() {
     return {
-      dark: true,
+      dark: false,
       clipped: true,
       drawer: true,
       fixed: true,
