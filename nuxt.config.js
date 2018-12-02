@@ -1,5 +1,3 @@
-const pkg = require('./package')
-
 module.exports = {
   mode: 'universal',
 
@@ -7,14 +5,26 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    htmlAttrs: {
+      lang: 'ja'
+    },
+    title: 'キョロの紹介',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'キョロの紹介ページです'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css'
+      },
       {
         rel: 'stylesheet',
         href:

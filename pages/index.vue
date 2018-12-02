@@ -1,73 +1,71 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-xs-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >documentation</a>.</p>
-          <p>If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >discord</a>.</p>
-          <p>Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >Nuxt Documentation</a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >Nuxt GitHub</a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            flat
-            nuxt
-            to="/inspire"
-          >Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-content>
+    <section>
+      <v-parallax
+        src="img/hero.jpeg"
+        height="600"
+      >
+        <v-layout
+          column
+          align-center
+          justify-center
+          class="white--text"
+        >
+          <v-avatar size="200">
+            <img src="img/icon_400x400.jpg">
+          </v-avatar>
+          <h1 class="white--text mb-2 display-1 text-xs-center">Welcom</h1>
+        </v-layout>
+      </v-parallax>
+    </section>
+
+    <section>
+      <v-layout
+        row
+        wrap
+        justify-center
+        class="my-5"
+      >
+        <v-flex
+          xs12
+          sm4
+          offset-sm1
+        >
+          <v-card class="elevation-0 transparent">
+            <v-card-title
+              primary-title
+              class="layout justify-center"
+            >
+              <div class="headline">
+                <span>Links</span>
+              </div>
+            </v-card-title>
+            <v-list class="transparent">
+              <v-list-tile>
+                <v-list-tile-action>
+                  <v-icon class="blue--text text--lighten-2">mdi-github-circle</v-icon>
+                </v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title><a href="https://github.com/kyoronet">@kyoronet</a></v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+              <v-list-tile>
+                <v-list-tile-action>
+                  <v-icon class="blue--text text--lighten-2">mdi-twitter</v-icon>
+                </v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title><a href="https://twitter.com/kyoro_net">@kyoro_net</a></v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </section>
+
+  </v-content>
+
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
-}
 </script>
