@@ -1,50 +1,49 @@
 <template>
   <v-app :dark="dark">
-    <v-navigation-drawer
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
-      fixed
-      app
-    >
+    <!-- サイドバー -->
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :to="item.to"
-          :href="item.href"
-          :key="i"
-          router
-          exact
+        <v-list-group
+          v-for="item in items"
+          v-model="item.active"
+          :key="item.title"
+          :prepend-icon="item.icon"
+          no-action
         >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon" />
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-tile slot="activator">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile v-for="subItem in item.items" :key="subItem.title">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+            </v-list-tile-content>
+
+            <v-list-tile-action>
+              <v-icon>{{ subItem.icon }}</v-icon>
+            </v-list-tile-action>
+          </v-list-tile>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
+
+    <!-- ナビバー -->
+    <v-toolbar :clipped-left="clipped" fixed app>
+      <!-- サイドバー表示/非表示切替ボタン -->
+      <v-toolbar-side-icon @click="drawer = !drawer"/>
+      <!-- タイトル -->
+      <v-toolbar-title v-text="title"/>
+      <v-spacer/>
+      <!-- 夜間モード切替ボタン -->
       <v-list-tile>
         <v-list-tile-action>
-          <v-switch
-            v-model="dark"
-            hide-details
-            label="夜間モード"
-          />
+          <v-switch v-model="dark" hide-details label="夜間モード"/>
         </v-list-tile-action>
       </v-list-tile>
     </v-toolbar>
-    <nuxt />
-
+    <nuxt/>
   </v-app>
 </template>
 
@@ -52,19 +51,30 @@
 export default {
   data() {
     return {
-      dark: Math.floor(Math.random() * 2) === 0,
+      dark: false,
       clipped: true,
       drawer: true,
       fixed: true,
       items: [
-        { icon: 'apps', title: 'Welcome', to: '/' },
-        { icon: 'create', title: 'Blog', href: 'https://blog.kyoro.net' }
+        {
+          icon: 'apps',
+          title: 'Welcome',
+          to: '/',
+          items: [
+            {
+              icon: 'link',
+              title: 'Link',
+              to: '#link'
+            }
+          ]
+        }
       ],
       miniVariant: false,
-      right: true,
-      rightDrawer: false,
       title: 'キョロの紹介'
     }
+  },
+  created: function() {
+    this.dark = Math.floor(Math.random() * 2) === 0
   }
 }
 </script>

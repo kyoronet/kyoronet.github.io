@@ -1,16 +1,8 @@
 <template>
   <v-content>
     <section>
-      <v-parallax
-        src="https://picsum.photos/1350/805?random"
-        height="600"
-      >
-        <v-layout
-          column
-          align-center
-          justify-center
-          class="white--text"
-        >
+      <v-parallax src="https://picsum.photos/1350/805?random" height="600">
+        <v-layout column align-center justify-center class="white--text">
           <v-avatar size="200">
             <img src="img/icon_400x400.jpg">
           </v-avatar>
@@ -19,41 +11,24 @@
     </section>
 
     <section>
-      <v-layout
-        row
-        wrap
-        justify-center
-        class="my-5"
-      >
-        <v-flex
-          xs12
-          sm4
-          offset-sm1
-        >
-          <v-card class="elevation-0 transparent">
-            <v-card-title
-              primary-title
-              class="layout justify-center"
-            >
+      <v-layout row wrap justify-center class="my-5">
+        <v-flex xs12 sm4>
+          <v-card class="elevation-0">
+            <v-card-title primary-title class="layout justify-center">
               <div class="headline">
-                <span>Links</span>
+                <v-icon>link</v-icon>
+                <span>Link</span>
               </div>
             </v-card-title>
-            <v-list class="transparent">
-              <v-list-tile>
+            <v-list>
+              <v-list-tile v-for="(item, i) in links" :key="i">
                 <v-list-tile-action>
-                  <v-icon class="blue--text text--lighten-2">mdi-github-circle</v-icon>
+                  <v-icon class="blue--text text--lighten-2">{{ item.icon }}</v-icon>
                 </v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title><a href="https://github.com/kyoronet">Github</a></v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-              <v-list-tile>
-                <v-list-tile-action>
-                  <v-icon class="blue--text text--lighten-2">mdi-twitter</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-content>
-                  <v-list-tile-title><a href="https://twitter.com/kyoro_net">Twitter</a></v-list-tile-title>
+                  <v-list-tile-title>
+                    <a :href="item.href">{{ item.title }}</a>
+                  </v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </v-list>
@@ -61,10 +36,31 @@
         </v-flex>
       </v-layout>
     </section>
-
   </v-content>
-
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      links: [
+        {
+          icon: 'mdi-twitter',
+          title: 'Twitter',
+          href: 'https://twitter.com/kyoro_net'
+        },
+        {
+          icon: 'mdi-github-circle',
+          title: 'Github',
+          href: 'https://github.com/kyoronet'
+        },
+        {
+          icon: 'create',
+          title: 'Blog',
+          href: 'https://blog.kyoro.net'
+        }
+      ]
+    }
+  }
+}
 </script>
