@@ -53,7 +53,7 @@ export default {
     return {
       dark: false,
       clipped: true,
-      drawer: true,
+      drawer: false,
       fixed: true,
       items: [
         {
