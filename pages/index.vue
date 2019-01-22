@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-content class="mb-5">
     <section id="portfolio">
       <v-parallax
         src="https://kyoronet.github.io/image-storage/www.kyoro.net/hero.jpg"
