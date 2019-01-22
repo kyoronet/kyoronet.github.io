@@ -1,7 +1,10 @@
 <template>
   <v-content>
     <section>
-      <v-parallax src="https://picsum.photos/1350/805?random" height="600">
+      <v-parallax
+        src="https://kyoronet.github.io/image-storage/www.kyoro.net/hero.jpg"
+        height="600"
+      >
         <v-layout column align-center justify-center class="white--text">
           <v-avatar size="200">
             <img src="img/icon_400x400.jpg">
