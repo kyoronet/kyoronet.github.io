@@ -3,29 +3,14 @@
     <!-- サイドバー -->
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-group
-          v-for="item in items"
-          v-model="item.active"
-          :key="item.title"
-          :prepend-icon="item.icon"
-          no-action
-        >
-          <v-list-tile slot="activator">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-
-          <v-list-tile v-for="subItem in item.items" :key="subItem.title">
-            <v-list-tile-content>
-              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-            </v-list-tile-content>
-
-            <v-list-tile-action>
-              <v-icon>{{ subItem.icon }}</v-icon>
-            </v-list-tile-action>
-          </v-list-tile>
-        </v-list-group>
+        <v-list-tile v-for="(item, i) in items" :to="item.to" :key="i" router exact>
+          <v-list-tile-action>
+            <v-icon v-html="item.icon"/>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title v-text="item.title"/>
+          </v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
@@ -51,15 +36,13 @@ export default {
       items: [
         {
           icon: 'apps',
-          title: 'Welcome',
-          to: '/',
-          items: [
-            {
-              icon: 'link',
-              title: 'Link',
-              to: '#link'
-            }
-          ]
+          title: 'Portfolio',
+          to: '#portfolio'
+        },
+        {
+          icon: 'message',
+          title: 'Contact us',
+          to: '#contact'
         }
       ],
       miniVariant: false,
