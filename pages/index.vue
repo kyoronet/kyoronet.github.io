@@ -186,7 +186,8 @@ export default {
           icon: 'mdi-github-circle',
           title: 'Github',
           href: 'https://github.com/kyoronet'
-        },
+        }
+        /*
         {
           icon: 'mdi-twitter',
           title: 'Twitter',
@@ -197,6 +198,7 @@ export default {
           title: 'Blog',
           href: 'https://blog.kyoro.net'
         }
+        */
       ]
     }
   }
