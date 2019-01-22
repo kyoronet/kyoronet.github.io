@@ -95,6 +95,36 @@ export default {
     return {
       portfolio: [
         {
+          title: '四択問題',
+          details: '',
+          img: 'https://kyoronet.github.io/image-storage/rails-quiz/check.gif',
+          links: [
+            {
+              icon: 'mdi-web',
+              title: 'Web',
+              href: 'https://rails-quiz2.herokuapp.com/'
+            },
+            {
+              icon: 'mdi-github-circle',
+              title: 'Github',
+              href: 'https://github.com/kyoronet/rails-quiz'
+            }
+          ]
+        },
+        {
+          title: 'ドキュメントバージョン管理',
+          details: '',
+          img:
+            'https://kyoronet.github.io/image-storage/angular-doc-lab/upload.gif',
+          links: [
+            {
+              icon: 'mdi-github-circle',
+              title: 'Github',
+              href: 'https://github.com/kyoronet/angular-doc-lab'
+            }
+          ]
+        },
+        {
           title: '自作コーディングエディタ',
           details: '',
           img:
@@ -120,6 +150,19 @@ export default {
           ]
         },
         {
+          title: 'ネット動画プレーヤー',
+          details: '',
+          img:
+            'https://kyoronet.github.io/image-storage/actionscript-netvideo/demo.gif',
+          links: [
+            {
+              icon: 'mdi-github-circle',
+              title: 'Github',
+              href: 'https://github.com/kyoronet/actionscript-netvideo'
+            }
+          ]
+        },
+        {
           title: '簡易掲示板',
           details: '',
           img:
@@ -134,49 +177,6 @@ export default {
               icon: 'mdi-github-circle',
               title: 'Github',
               href: 'https://github.com/kyoronet/php-simple-bbs'
-            }
-          ]
-        },
-        {
-          title: 'ドキュメントバージョン管理',
-          details: '',
-          img:
-            'https://kyoronet.github.io/image-storage/angular-doc-lab/upload.gif',
-          links: [
-            {
-              icon: 'mdi-github-circle',
-              title: 'Github',
-              href: 'https://github.com/kyoronet/angular-doc-lab'
-            }
-          ]
-        },
-        {
-          title: '四択問題',
-          details: '',
-          img: 'https://kyoronet.github.io/image-storage/rails-quiz/check.gif',
-          links: [
-            {
-              icon: 'mdi-web',
-              title: 'Web',
-              href: 'https://rails-quiz2.herokuapp.com/'
-            },
-            {
-              icon: 'mdi-github-circle',
-              title: 'Github',
-              href: 'https://github.com/kyoronet/rails-quiz'
-            }
-          ]
-        },
-        {
-          title: 'ネット動画プレーヤー',
-          details: '',
-          img:
-            'https://kyoronet.github.io/image-storage/actionscript-netvideo/demo.gif',
-          links: [
-            {
-              icon: 'mdi-github-circle',
-              title: 'Github',
-              href: 'https://github.com/kyoronet/actionscript-netvideo'
             }
           ]
         }
