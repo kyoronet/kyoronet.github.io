@@ -32,12 +32,17 @@
     <v-footer class="pa-3 mt-5">
       <v-spacer></v-spacer>
       <div>&copy; {{ new Date().getFullYear() }}</div>
+      <v-spacer></v-spacer>
     </v-footer>
+    <app-fab/>
   </v-app>
 </template>
 
 <script>
+import AppFab from '@/components/app-fab'
+
 export default {
+  components: { AppFab },
   data() {
     return {
       duration: 300,
