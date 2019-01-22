@@ -1,6 +1,6 @@
 <template>
   <v-content>
-    <section>
+    <section id="portfolio">
       <v-parallax
         src="https://kyoronet.github.io/image-storage/www.kyoro.net/hero.jpg"
         height="600"
@@ -53,7 +53,7 @@
       </v-layout>
     </section>
 
-    <section>
+    <section id="contact">
       <v-parallax
         src="https://kyoronet.github.io/image-storage/www.kyoro.net/section.jpg"
         height="380"

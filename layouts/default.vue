@@ -3,7 +3,13 @@
     <!-- サイドバー -->
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-tile v-for="(item, i) in items" :to="item.to" :key="i" router exact>
+        <v-list-tile
+          v-for="(item, i) in items"
+          :key="i"
+          router
+          exact
+          @click="$vuetify.goTo(item.to, options)"
+        >
           <v-list-tile-action>
             <v-icon v-html="item.icon"/>
           </v-list-tile-action>
@@ -29,6 +35,9 @@
 export default {
   data() {
     return {
+      duration: 300,
+      offset: 0,
+      easing: 'easeInOutCubic',
       dark: false,
       clipped: true,
       drawer: false,
@@ -47,6 +56,15 @@ export default {
       ],
       miniVariant: false,
       title: 'キョロの紹介'
+    }
+  },
+  computed: {
+    options() {
+      return {
+        duration: this.duration,
+        offset: this.offset,
+        easing: this.easing
+      }
     }
   }
 }
