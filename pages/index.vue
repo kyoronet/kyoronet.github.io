@@ -16,8 +16,8 @@
           <v-card class="elevation-0">
             <v-card-title primary-title class="layout justify-center">
               <div class="headline">
-                <v-icon>link</v-icon>
-                <span>Link</span>
+                <v-icon>message</v-icon>
+                <span>Contact us</span>
               </div>
             </v-card-title>
             <v-list>
